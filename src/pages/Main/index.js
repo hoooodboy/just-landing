@@ -71,6 +71,46 @@ const Index = () => {
           </SubTitle>
         </SecondCaptionBlock>
       </Section>
+      <PriseSection>
+        <PriseTitle>
+          <p>JUST</p>의 1년
+        </PriseTitle>
+        <ProjectList>
+          <ProjectBlock>
+            <ProjectTn src={require("../../assets/prise1.png")} />
+            <ProjectTitle>
+              JUST는 2022년에 만들어졌지만
+              <br /> 카로로, 엄랭, 이루, ZEPING 등<br /> 무려 43개의 프로젝트를
+              이뤄냈어요.
+            </ProjectTitle>
+            <ProjectLink>view more {">"}</ProjectLink>
+          </ProjectBlock>
+          <ProjectBlock>
+            <ProjectTn src={require("../../assets/prise2.png")} />
+            <ProjectTitle>
+              JUST는 많은 프로젝트 개수만큼
+              <br />
+              상도 많이 받았어요!!
+              <br />
+              정말 단지, JUST 했을 뿐인데!
+              <br />
+            </ProjectTitle>
+            <ProjectLink>view more {">"}</ProjectLink>
+          </ProjectBlock>
+          <ProjectBlock>
+            <ProjectTn src={require("../../assets/prise3.png")} />
+            <ProjectTitle>
+              이렇게 다양한
+              <br />
+              대회와 프로젝트들로
+              <br />
+              JUST는 언론에 많이 노출되었어요.
+              <br />
+            </ProjectTitle>
+            <ProjectLink>view more {">"}</ProjectLink>
+          </ProjectBlock>
+        </ProjectList>
+      </PriseSection>
     </PageBlock>
   );
 };
@@ -227,9 +267,73 @@ const SubTitle = styled.div`
   }
 `;
 
-// const Orange = styled.p`
-//   margin: 0;
-//   color: #faa71b;
-// `;
+const PriseSection = styled.div`
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #222;
+  padding: 120px 0;
+`;
+
+const PriseTitle = styled.div`
+  display: flex;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+
+  letter-spacing: -0.02em;
+
+  color: #fff;
+
+  & > p {
+    margin: 0;
+    color: #faa71b;
+  }
+`;
+
+const ProjectList = styled.div`
+  width: 1360px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ProjectBlock = styled.div``;
+
+const ProjectTn = styled.img`
+  width: 180px;
+  height: 180px;
+`;
+
+const ProjectTitle = styled.div`
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+
+  & > p {
+    margin: 0;
+    font-weight: 700;
+    color: #faa71b;
+  }
+`;
+
+const ProjectLink = styled.div`
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  color: #aaaaaa;
+`;
 
 export default Index;
