@@ -6,7 +6,6 @@ import { ReactComponent as FooterLogo } from "../../assets/footer-logo.svg";
 import { ReactComponent as YoutubeLogo } from "../../assets/youtube.svg";
 import { ReactComponent as InstaLogo } from "../../assets/insta.svg";
 import { ReactComponent as GithubLogo } from "../../assets/github.svg";
-// import { ReactComponent as MainFlight } from "../../assets/main-flight.svg";
 
 const Index = () => {
   return (
@@ -18,7 +17,19 @@ const Index = () => {
             <Nav isActive={window.location.pathname === "/"} to="/">
               Home
             </Nav>
-            <Nav
+            <Nav isActive={window.location.pathname === "/portfolio"} to="/">
+              PORTFOLIO
+            </Nav>
+            <Nav isActive={window.location.pathname === "/member"} to="/">
+              MEMBER
+            </Nav>
+            <Nav isActive={window.location.pathname === "/2023"} to="/">
+              2023
+            </Nav>
+            <Nav isActive={window.location.pathname === "/faq"} to="/">
+              FAQ
+            </Nav>
+            {/* <Nav
               isActive={window.location.pathname === "/portfolio"}
               to="/portfolio"
             >
@@ -32,7 +43,7 @@ const Index = () => {
             </Nav>
             <Nav isActive={window.location.pathname === "/faq"} to="/faq">
               FAQ
-            </Nav>
+            </Nav> */}
           </NavBlock>
         </HeaderWrapper>
       </HeaderBlock>
@@ -282,15 +293,15 @@ const SubTitle = styled.div`
 `;
 
 const PriseSection = styled.div`
-  width: 100%;
-  height: 500px;
+  width: calc(100% - 200px);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   background: #222;
-  padding: 120px 0;
+  padding: 120px 100px;
 `;
 
 const PriseTitle = styled.div`
@@ -303,6 +314,8 @@ const PriseTitle = styled.div`
 
   color: #fff;
 
+  margin-bottom: 80px;
+
   & > p {
     margin: 0;
     color: #faa71b;
@@ -310,8 +323,11 @@ const PriseTitle = styled.div`
 `;
 
 const ProjectList = styled.div`
-  width: 1360px;
+  width: 100%;
+  max-width: 1360px;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
