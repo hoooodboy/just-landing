@@ -1,25 +1,24 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Loading from "../components/loading";
+import MainPage from "./pages/Main";
+// import MbtiResult from "../pages/mbtiResult";
+// import MbtiSelect from "../pages/mbtiSelect";
+// import QuizResult from "../pages/quizResult";
+// import QuizSelect from "../pages/quizSelect";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        {/* <Route path="/mbti/select" element={<MbtiSelect></MbtiSelect>}></Route>
+        <Route path="/mbti/result" element={<MbtiResult></MbtiResult>}></Route>
+        <Route path="/loading" element={<Loading></Loading>}></Route>
+        <Route path="/quiz/select" element={<QuizSelect></QuizSelect>}></Route>
+        <Route path="/quiz/result" element={<QuizResult></QuizResult>}></Route> */}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
