@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { ReactComponent as FooterLogo } from "../../assets/footer-logo.svg";
+import { ReactComponent as YoutubeLogo } from "../../assets/youtube.svg";
+import { ReactComponent as InstaLogo } from "../../assets/insta.svg";
+import { ReactComponent as GithubLogo } from "../../assets/github.svg";
 // import { ReactComponent as MainFlight } from "../../assets/main-flight.svg";
 
 const Index = () => {
@@ -111,6 +115,16 @@ const Index = () => {
           </ProjectBlock>
         </ProjectList>
       </PriseSection>
+      <FooterBlock>
+        <FooterWrapper>
+          <FooterLogo />
+          <Links>
+            <YoutubeLogo />
+            <InstaLogo />
+            <GithubLogo />
+          </Links>
+        </FooterWrapper>
+      </FooterBlock>
     </PageBlock>
   );
 };
@@ -334,6 +348,23 @@ const ProjectLink = styled.div`
   letter-spacing: -0.02em;
 
   color: #aaaaaa;
+`;
+
+const FooterBlock = styled.div`
+  width: 100%;
+`;
+
+const FooterWrapper = styled.div`
+  padding: 120px 320px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Links = styled.div`
+  width: 180px;
+  display: flex;
+
+  justify-content: space-between;
 `;
 
 export default Index;
