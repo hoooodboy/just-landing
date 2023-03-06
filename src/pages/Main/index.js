@@ -56,6 +56,20 @@ const Index = () => {
           </SubCaption>
         </CaptionWrapper>
       </Section>
+      <Section>
+        <SecondBg
+          alt="main-flight"
+          src={require("../../assets/secondSectionBg.png")}
+        />
+        <SecondCaptionBlock>
+          그리고 2023년,
+          <SubTitle>
+            <p>JUST</p>는 새로운 여정을 떠나려 합니다.
+            <br />
+            여러분과 함께요.
+          </SubTitle>
+        </SecondCaptionBlock>
+      </Section>
     </PageBlock>
   );
 };
@@ -98,6 +112,8 @@ const Section = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
+
+  position: relative;
 `;
 
 const MainFlight = styled.img`
@@ -118,6 +134,7 @@ const MainCaptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const MainCaption = styled.div`
   margin: 0;
   display: flex;
@@ -143,5 +160,58 @@ const SubCaption = styled.div`
 
   color: #aaaaaa;
 `;
+
+const SecondBg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(15px);
+`;
+
+const SecondCaptionBlock = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  opacity: 0.7;
+  color: #fff;
+  padding: 100px 0 200px 0;
+
+  position: absolute;
+  top: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+const SubTitle = styled.div`
+  display: flex;
+  text-align: center;
+
+  margin-top: 40px;
+  line-height: 29px;
+
+  & > p {
+    margin: 0;
+
+    color: #faa71b;
+  }
+`;
+
+// const Orange = styled.p`
+//   margin: 0;
+//   color: #faa71b;
+// `;
 
 export default Index;
