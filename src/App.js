@@ -11,11 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
-        {/* <Route path="/mbti/select" element={<MbtiSelect></MbtiSelect>}></Route>
-        <Route path="/mbti/result" element={<MbtiResult></MbtiResult>}></Route>
-        <Route path="/loading" element={<Loading></Loading>}></Route>
-        <Route path="/quiz/select" element={<QuizSelect></QuizSelect>}></Route>
-        <Route path="/quiz/result" element={<QuizResult></QuizResult>}></Route> */}
+        <Route path="/portfolio" element={<MainPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
