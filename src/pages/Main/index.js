@@ -35,8 +35,9 @@ const Index = () => {
       <Section>
         <MainFlight
           alt="main-flight"
-          src={require("../../assets/mainFlight.png")}
+          src={require("../../assets/firstSectionBg.png")}
         />
+        <MainBgOpacity />
         <CaptionWrapper>
           <MainCaptionWrapper>
             <MainCaption>
@@ -86,6 +87,7 @@ const HeaderBlock = styled.div`
 
   position: fixed;
   top: 0px;
+  z-index: 10;
 `;
 
 const HeaderWrapper = styled.div`
@@ -114,12 +116,25 @@ const Section = styled.div`
   justify-content: center;
 
   position: relative;
+  background: #111;
 `;
 
 const MainFlight = styled.img`
   width: 100%;
-  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   object-fit: cover;
+  /* position: absolute; */
+  right: 0;
+`;
+
+const MainBgOpacity = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  box-shadow: inset 0 -200px 250px #111 !important;
 `;
 
 const CaptionWrapper = styled.div`
@@ -164,8 +179,11 @@ const SubCaption = styled.div`
 const SecondBg = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   filter: blur(15px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const SecondCaptionBlock = styled.div`
@@ -176,10 +194,10 @@ const SecondCaptionBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: #111;
   opacity: 0.7;
   color: #fff;
-  padding: 100px 0 200px 0;
+  /* padding: 100px 0 200px 0; */
 
   position: absolute;
   top: 0;
@@ -192,7 +210,7 @@ const SecondCaptionBlock = styled.div`
 
   color: #ffffff;
 
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 `;
 
 const SubTitle = styled.div`
